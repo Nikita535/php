@@ -22,6 +22,15 @@ CREATE TABLE IF NOT EXISTS `order`
 );
 
 
+CREATE TABLE IF NOT EXISTS files (
+     ID INT(11) NOT NULL  AUTO_INCREMENT,
+     content LONGBLOB NOT NULL,
+     author VARCHAR(32) NOT NULL,
+     title VARCHAR(256) NOT NULL,
+     `type` VARCHAR(256) NOT NULL,
+     PRIMARY KEY (ID)
+);
+
 INSERT INTO `order` (name,description,price) VALUES ('Tea','With sugar',200);
 INSERT INTO `order` (name,description,price) VALUES ('Cake','Without sugar',899);
 INSERT INTO `order` (name,description,price) VALUES ('Bear','Craft',400);
